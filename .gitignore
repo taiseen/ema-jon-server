@@ -1,0 +1,13 @@
+
+# dependencies
+node_modules/
+.vscode/
+
+private_key/
+.env
+
+# testing
+coverage/
+
+# production
+build/
