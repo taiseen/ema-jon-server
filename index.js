@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 const port = 5000;
-app.listen(port);
+app.listen(process.env.PORT || port);
 
 
 //#####################################################################
@@ -67,7 +67,7 @@ client.connect(err => {
     //######################################################################################
     // Order Collection
     //######################################################################################
-    const orderCollection = client.db(`${process.env.DB_NAME}`).collection('allOrder');
+    const orderCollection = client.db(`${process.env.DB_NAME}`).collection(`${process.env.DB_ORDER}`);
 
     app.post('/addOrder', (req, res) => {
         const order = req.body;
