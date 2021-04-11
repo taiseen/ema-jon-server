@@ -94,5 +94,5 @@ client.connect(err => {
 //#####################################################################
 //#####################################################################
 app.get('/', (req, res) => {
-    res.send("<h1>NodeJS Server is Running...</h1>")
+    res.send("<h1>Ema-Jon | NodeJS Server is Running...</h1>")
 })
