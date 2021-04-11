@@ -41,7 +41,9 @@ client.connect(err => {
     });
 
     app.get('/allProducts', (req, res) => {
-        allProduct.find({})//.limit(20)
+        //allProduct.find({})//.limit(20)
+        const search = req.query.search;
+        allProduct.find({ name: { $regex: search } })
             .toArray((err, documents) => {
                 res.send(documents);
             })
